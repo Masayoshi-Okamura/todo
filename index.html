@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ToDo App</h1>
+        </header>
+
+        <section class="input-section">
+            <form id="todo-form">
+                <div class="input-group">
+                    <input type="text" id="task-text" placeholder="タスクを入力してください..." required>
+                    <select id="task-category">
+                        <option value="仕事">仕事</option>
+                        <option value="プライベート">プライベート</option>
+                        <option value="その他">その他</option>
+                    </select>
+                    <input type="date" id="task-date" required>
+                    <button type="submit" id="add-btn">追加</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="仕事">仕事</button>
+                <button class="filter-btn" data-filter="プライベート">プライベート</button>
+                <button class="filter-btn" data-filter="その他">その他</button>
+            </div>
+        </section>
+
+        <main>
+            <ul id="task-list">
+                <!-- Tasks will be injected here -->
+            </ul>
+            <div id="empty-state" class="hidden">タスクはありません。</div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
